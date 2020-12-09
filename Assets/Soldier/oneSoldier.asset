@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782a07813f0fad24e9ad1bc286d7a7e1, type: 3}
+  m_Name: oneSoldier
+  m_EditorClassIdentifier: 
+  CharacterImage: {fileID: 0}
+  CharacterDescription: 
+  Code: 1
+  LevelHP: 50
+  LevelDamage: 50
+  LevelSpeed: 1
+  Character: {fileID: 6113834526383784114, guid: 4e277132e5b1068469e180fb2ff7d167,
+    type: 3}
+  MoveDistance: 3
+  AttackDistance: 1
