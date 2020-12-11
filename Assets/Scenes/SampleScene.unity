@@ -397,6 +397,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1096091968, guid: c19d5aa89514bbc4abb8b123bf83f17b, type: 3}
+      propertyPath: effectResistances.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096091968, guid: c19d5aa89514bbc4abb8b123bf83f17b, type: 3}
+      propertyPath: damageModifiers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096091968, guid: c19d5aa89514bbc4abb8b123bf83f17b, type: 3}
+      propertyPath: damageModifiers.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096091968, guid: c19d5aa89514bbc4abb8b123bf83f17b, type: 3}
+      propertyPath: z_display_flags
+      value: 4095
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987082185421468099, guid: c19d5aa89514bbc4abb8b123bf83f17b,
+        type: 3}
+      propertyPath: level
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3987082185421468100, guid: c19d5aa89514bbc4abb8b123bf83f17b,
         type: 3}
       propertyPath: m_LocalPosition.x

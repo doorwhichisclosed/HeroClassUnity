@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NullSave.TOCK.Stats;
 
 public class Human : MonoBehaviour
 {
@@ -99,7 +100,10 @@ public class Human : MonoBehaviour
 
     public void ChangeHP(float effectInt)
     {
-        hp += effectInt;
+        if (GetComponent<StatsCog>() != null)
+            GetComponent<StatsCog>().healthStat += effectInt;
+        else
+            hp += effectInt;
         if (hp <= 0)
             gameObject.SetActive(false);
     }

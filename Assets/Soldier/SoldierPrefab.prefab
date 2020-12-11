@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8144538516854852680}
   - component: {fileID: 8144538516854852683}
   - component: {fileID: 8144538516854852681}
+  - component: {fileID: 2038016841}
   m_Layer: 0
-  m_Name: Soldier
+  m_Name: SoldierPrefab
   m_TagString: soldier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,6 +80,64 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2038016841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8144538516854852682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6984d3e19fbb4fd4fb8a48ea28409172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+  - {fileID: 11400000, guid: 0499fc1071ff1aa46bf5a67d9dcfadfe, type: 2}
+  - {fileID: 11400000, guid: 013c19baa0fc74c478c8c5a3c69fb6e3, type: 2}
+  - {fileID: 11400000, guid: 72650b698951fa0409e5977904cd5421, type: 2}
+  - {fileID: 11400000, guid: cef62d54bd7d8444c8d56b89fe4595d0, type: 2}
+  - {fileID: 11400000, guid: 4551283beae567d43912795c9fd52712, type: 2}
+  - {fileID: 11400000, guid: ee9608f6b68add1489dba57a8d187b41, type: 2}
+  effectList: {fileID: 0}
+  startingEffects: []
+  effectResistances: []
+  healthStat: HP
+  damageValue: '[Damage]'
+  directionImmunity: 0
+  damageModifiers: []
+  immunityAfterHit: 0
+  hitDirTolerance: 0
+  onDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  onImmuneToDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  onEffectAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  onEffectEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  onEffectRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  onEffectResisted:
+    m_PersistentCalls:
+      m_Calls: []
+  onHitDirection:
+    m_PersistentCalls:
+      m_Calls: []
+  onHitDamageDirection:
+    m_PersistentCalls:
+      m_Calls: []
+  z_display_flags: 4095
+  effectFolder: 
+  statFolder: 
 --- !u!1 &8144538518044526905
 GameObject:
   m_ObjectHideFlags: 0

@@ -109,8 +109,8 @@ MonoBehaviour:
   damageValue: '[Damage]'
   directionImmunity: 0
   damageModifiers: []
-  immunityAfterHit: 0.5
-  hitDirTolerance: 0.15
+  immunityAfterHit: 0
+  hitDirTolerance: 0
   onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
