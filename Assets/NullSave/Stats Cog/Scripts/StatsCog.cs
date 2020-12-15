@@ -88,6 +88,7 @@ namespace NullSave.TOCK.Stats
             foreach (DamageModifier modifer in damageModifiers)
             {
                 modifer.Initialize(this);
+                Debug.Log(modifer.damageType.name);
             }
 
             // Initialize Starting Effects
@@ -522,6 +523,7 @@ namespace NullSave.TOCK.Stats
             {
                 if (modifier.name == modifierName)
                 {
+                    Debug.Log("True");
                     result.Add(modifier);
                 }
             }
@@ -1040,7 +1042,7 @@ namespace NullSave.TOCK.Stats
             // Apply weakness
             foreach (Damage damage in damageDealer.damage)
             {
-
+                Debug.Log(damage.damageType.name);
 #if STATS_COG
                 if (damageDealer.StatsSource != null)
                 {
@@ -1068,6 +1070,7 @@ namespace NullSave.TOCK.Stats
                         {
                             adjustedDamage *= dm.CurrentValue;
                         }
+                        Debug.Log(damage.damageType.name + " 임");
                     }
                 }
                 else
@@ -1098,7 +1101,7 @@ namespace NullSave.TOCK.Stats
             {
                 Debug.LogWarning("Could not find '" + healthStat + "' to apply damage");
             }
-
+            Debug.Log(totalAdjustedDamage);
         }
 
         /// <summary>

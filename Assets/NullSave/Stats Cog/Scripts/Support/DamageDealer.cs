@@ -5,7 +5,6 @@ using UnityEngine.Events;
 namespace NullSave.TOCK.Stats
 {
     [HierarchyIcon("weapon", false)]
-    [RequireComponent(typeof(Collider))]
     public class DamageDealer : MonoBehaviour
     {
 
@@ -31,15 +30,18 @@ namespace NullSave.TOCK.Stats
         #endregion
 
         #region Unity Methods
+        //private void OnTriggerEnter(Collider other)
+        //{
+        //    ApplyDamage(other.gameObject);
+        //}
 
-        private void OnTriggerEnter(Collider other)
+        //private void OnColliderEnter(Collider other)
+        //{
+        //    ApplyDamage(other.gameObject);
+        //}
+        public void Attack(GameObject enemy)
         {
-            ApplyDamage(other.gameObject);
-        }
-
-        private void OnColliderEnter(Collider other)
-        {
-            ApplyDamage(other.gameObject);
+            ApplyDamage(enemy);
         }
 
         #endregion

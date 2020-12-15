@@ -121,6 +121,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &578347507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3987082185421468101, guid: c19d5aa89514bbc4abb8b123bf83f17b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1450729711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &578347508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578347507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0acd30e11aee0884ba99b3d45039cf85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minBetweenDamage: 0
+  damage:
+  - damageType: {fileID: 11400000, guid: 208979513e9b7934bb4c71aa557ccbaa, type: 2}
+    baseAmount: Damage
+  overrideDamageSource: 0
+  damageSource: {fileID: 0}
+  effects: []
+  onDamageDealt:
+    m_PersistentCalls:
+      m_Calls: []
+  onColliderEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+  onColliderDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &578347509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578347507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de54d276057ba34d813389f4152a06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,10 +457,15 @@ PrefabInstance:
     - target: {fileID: 1096091968, guid: c19d5aa89514bbc4abb8b123bf83f17b, type: 3}
       propertyPath: damageModifiers.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 40fc29506bd8e344085a741a780c712f,
+        type: 2}
     - target: {fileID: 1096091968, guid: c19d5aa89514bbc4abb8b123bf83f17b, type: 3}
       propertyPath: z_display_flags
       value: 4095
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096091968, guid: c19d5aa89514bbc4abb8b123bf83f17b, type: 3}
+      propertyPath: damageValue
+      value: '[Damage]'
       objectReference: {fileID: 0}
     - target: {fileID: 3987082185421468099, guid: c19d5aa89514bbc4abb8b123bf83f17b,
         type: 3}
@@ -494,6 +548,8 @@ GameObject:
   - component: {fileID: 1784163501}
   - component: {fileID: 1784163500}
   - component: {fileID: 1784163505}
+  - component: {fileID: 1784163506}
+  - component: {fileID: 1784163507}
   m_Layer: 0
   m_Name: Cube
   m_TagString: enemy
@@ -616,3 +672,182 @@ MonoBehaviour:
   isAttack: 0
   moveTargetDistance: {fileID: 0}
   attackTargetDistance: {fileID: 0}
+--- !u!114 &1784163506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784163499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6984d3e19fbb4fd4fb8a48ea28409172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+  - {fileID: 11400000, guid: e530496f37b29124ca94d31807f79b2a, type: 2}
+  effectList: {fileID: 0}
+  startingEffects: []
+  effectResistances: []
+  healthStat: TestHP
+  damageValue: '[Damage]'
+  directionImmunity: 0
+  damageModifiers:
+  - {fileID: 11400000, guid: d8ce79ad59dd4b1459796a8674cf83a2, type: 2}
+  immunityAfterHit: 0
+  hitDirTolerance: 0
+  onDamageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  onImmuneToDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1784163499}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEffectAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  onEffectEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  onEffectRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  onEffectResisted:
+    m_PersistentCalls:
+      m_Calls: []
+  onHitDirection:
+    m_PersistentCalls:
+      m_Calls: []
+  onHitDamageDirection:
+    m_PersistentCalls:
+      m_Calls: []
+  z_display_flags: 4095
+  effectFolder: 
+  statFolder: 
+--- !u!114 &1784163507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784163499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de54d276057ba34d813389f4152a06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1784163499}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1001 &1839610963
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2038016841, guid: b02b453a044de464c954275ecb9c1fbb, type: 3}
+      propertyPath: damageModifiers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038016841, guid: b02b453a044de464c954275ecb9c1fbb, type: 3}
+      propertyPath: damageModifiers.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 40fc29506bd8e344085a741a780c712f,
+        type: 2}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852680, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852682, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_Name
+      value: SoldierPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852682, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144538516854852683, guid: b02b453a044de464c954275ecb9c1fbb,
+        type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b02b453a044de464c954275ecb9c1fbb, type: 3}

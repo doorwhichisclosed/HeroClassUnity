@@ -12,27 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf6c1843a0c8dc41bbe71efda15a8c1, type: 3}
   m_Name: Melee Resist
   m_EditorClassIdentifier: 
-  damageType: {fileID: 11400000, guid: 0352fb38ac5d5af478270dbfdfd6b564, type: 2}
+  damageType: {fileID: 0}
   modifierType: 0
   value: 0.5
   maximum: 4
   onBaseValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: NullSave.TOCK.Stats.ValueChanged, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: NullSave.TOCK.Stats.ValueChanged, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onBaseMaxValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: NullSave.TOCK.Stats.ValueChanged, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onMaxValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: NullSave.TOCK.Stats.ValueChanged, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null

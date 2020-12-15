@@ -20,7 +20,7 @@ MonoBehaviour:
   displayInList: 1
   value: 0
   minValue: 0
-  maxValue: 100
+  maxValue: 99999
   startWithMaxValue: 0
   enableRegen: 0
   regenDelay: 1

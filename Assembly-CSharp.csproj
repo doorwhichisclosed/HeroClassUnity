@@ -69,6 +69,7 @@
     <Compile Include="Assets\Hero\Hero.cs" />
     <Compile Include="Assets\Hero\HeroDB.cs" />
     <Compile Include="Assets\Human.cs" />
+    <Compile Include="Assets\ModifiedDamageDealer.cs" />
     <Compile Include="Assets\NullSave\Shared\Hierarchy Icons\Scripts\HierarchyIconAttribute.cs" />
     <Compile Include="Assets\NullSave\Shared\Hierarchy Icons\Scripts\Support\HierarchyData.cs" />
     <Compile Include="Assets\NullSave\Shared\Scripts\Extensions\IOExtensions.cs" />

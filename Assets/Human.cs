@@ -113,9 +113,9 @@ public class Human : MonoBehaviour
         isAttack = true;
         if (attackTarget.Peek() != null)
         {
-            attackTarget.Peek().ChangeHP(-damage);
+            if(GetComponent<StatsCog>()!=null)
+                GetComponent<DamageDealer>().Attack(attackTarget.Peek().gameObject);
         }
-        Debug.Log("공격함");
         yield return new WaitForSeconds(attackTime);//후에 애니메이션 재생 여부로 교체할 겁니다.
         isAttack = false;
     }
