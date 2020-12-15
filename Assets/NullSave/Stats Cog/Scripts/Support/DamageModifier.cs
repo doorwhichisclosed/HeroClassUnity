@@ -190,7 +190,6 @@ namespace NullSave.TOCK
         public void Initialize(StatsCog owner)
         {
             ActiveModifiers = new List<StatModifier>();
-
             // Set parent stats cog
             Parent = owner;
 

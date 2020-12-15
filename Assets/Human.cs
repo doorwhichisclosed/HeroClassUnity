@@ -114,7 +114,7 @@ public class Human : MonoBehaviour
         if (attackTarget.Peek() != null)
         {
             if(GetComponent<StatsCog>()!=null)
-                GetComponent<DamageDealer>().Attack(attackTarget.Peek().gameObject);
+                GetComponent<DamageDealer>().DealDamage(attackTarget.Peek().GetComponent<DamageReceiver>());
         }
         yield return new WaitForSeconds(attackTime);//후에 애니메이션 재생 여부로 교체할 겁니다.
         isAttack = false;

@@ -39,10 +39,6 @@ namespace NullSave.TOCK.Stats
         //{
         //    ApplyDamage(other.gameObject);
         //}
-        public void Attack(GameObject enemy)
-        {
-            ApplyDamage(enemy);
-        }
 
         #endregion
 
