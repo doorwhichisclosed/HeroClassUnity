@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096091968, guid: c19d5aa89514bbc4abb8b123bf83f17b, type: 3}
       propertyPath: immunityAfterHit
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3987082185421468099, guid: c19d5aa89514bbc4abb8b123bf83f17b,
         type: 3}

@@ -68,7 +68,10 @@
     <Compile Include="Assets\Distance\MoveDistance.cs" />
     <Compile Include="Assets\Hero\Hero.cs" />
     <Compile Include="Assets\Hero\HeroDB.cs" />
+    <Compile Include="Assets\Hero\TestWeapon.cs" />
     <Compile Include="Assets\Human.cs" />
+    <Compile Include="Assets\Item\Item.cs" />
+    <Compile Include="Assets\Item\ItemDB.cs" />
     <Compile Include="Assets\NullSave\Shared\Hierarchy Icons\Scripts\HierarchyIconAttribute.cs" />
     <Compile Include="Assets\NullSave\Shared\Hierarchy Icons\Scripts\Support\HierarchyData.cs" />
     <Compile Include="Assets\NullSave\Shared\Scripts\Extensions\IOExtensions.cs" />
