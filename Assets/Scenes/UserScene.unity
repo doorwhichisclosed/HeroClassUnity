@@ -282,7 +282,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 983047627}
-        m_MethodName: HeroSave
+        m_MethodName: SaveInformation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1269,9 +1269,13 @@ MonoBehaviour:
   goldText: {fileID: 110428973}
   diamondText: {fileID: 786912064}
   staminaText: {fileID: 1649210940}
-  heroList: []
-  heroPrefab: {fileID: 3987082185421468101, guid: c19d5aa89514bbc4abb8b123bf83f17b,
-    type: 3}
+  heroList:
+  - code: 
+    name: 
+    level: 0
+    exp: 0
+    itemList: []
+    skinList: []
 --- !u!4 &983047628
 Transform:
   m_ObjectHideFlags: 0

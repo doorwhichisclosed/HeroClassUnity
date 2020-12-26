@@ -29,17 +29,20 @@ public class Skin//skin 클래스, 영웅 코드, 스킨 코드, 스킨 이름, 
 [System.Serializable]
 public class HeroInfo//히어로 레벨과 가지고 있는 지의 여부 저장
 {
-    public HeroInfo(string _heroCode, string _name, int _level, int _exp)
+    public HeroInfo(string _heroCode, int _level, float _exp, List<string> _itmeList, List<string> _skinList)
     {
-        code = _heroCode;
-        name = _name;
+        code = _heroCode; 
         level = _level;
         exp = _exp;
+        itemList = _itmeList;
+        skinList = _skinList;
     }
     public string code;
     public string name;
     public int level;
-    public int exp;
+    public float exp;
+    public List<string> itemList;
+    public List<string> skinList;
 }
 
 [System.Serializable]

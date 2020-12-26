@@ -48,11 +48,21 @@ public class Hero : Human
             if(heroDBList[i].Code==this.code)
             {
                 HeroDB thisHero = heroDBList[i];
-                hPStat.value = thisHero.LevelHP;
-                damageStat.value = thisHero.LevelDamage;
+                float itemHP = 0;
+                float itemDmg = 0;
+                float itemSpeed = 0;
+                for (int j = 0; j < itemList.Count; j++)
+                {
+                    itemHP += itemList[j].plusHP;
+                    itemDmg += itemList[j].plusDamage;
+                    itemSpeed += itemList[j].plusSpeed;
+                    Debug.Log("아이템");
+                }
+                hPStat.value = thisHero.LevelHP + (" + " + itemHP.ToString());
+                damageStat.value = thisHero.LevelDamage + (" + " + itemDmg.ToString());
                 damageAreaStat.value = thisHero.AttackDistance;
                 moveAreaStat.value = thisHero.MoveDistance;
-                speedStat.value = thisHero.LevelSpeed;
+                speedStat.value = thisHero.LevelSpeed + (" + " + itemSpeed.ToString());
                 this.design = thisHero.Character;
                 levelStat.SetValue(level);
                 break;

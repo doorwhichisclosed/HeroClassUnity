@@ -15,13 +15,13 @@ public class User : MonoBehaviour
     public int maxStamina;//최대 스태미나
     public List<string> achievement;//업적
     public Text levelText, expText, goldText, diamondText, staminaText;//각각 담을 텍스트들
-    public List<Hero> heroList;//히어로 리스트
-    public GameObject heroPrefab;
+    public List<HeroInfo> heroList;//히어로 리스트
 
 
     private string heroSavePath;
     private string achievementSavePath;
     private string userInfoSavePath;//유저 정보 저장해놓을 위치
+
     private void Start()
     {
         heroSavePath = Application.persistentDataPath + "/MyHeroText.txt";
@@ -37,15 +37,15 @@ public class User : MonoBehaviour
 
     public void LoadInformation()//정보 불러오기
     {
+        HeroInfoLoad();
         UserInfoLoad();
-        HeroLoad();
         AchievementInfoLoad();
     }
 
     public void SaveInformation()//정보 저장
     {
+        HeroInfoSave();
         UserInfoSave();
-        HeroSave();
         AchievementInfoSave();
     }
 
@@ -127,51 +127,11 @@ public class User : MonoBehaviour
         stamina = loadedUserinfo.stamina;
     }
 
-    public void HeroSave()//히어로 정보 저장
-    {
-        List<HeroInfo> saveHeroInfo = new List<HeroInfo>();
-        for (int i = 0; i < heroList.Count; i++)
-        {
-            saveHeroInfo.Add(new HeroInfo(heroList[i].code, heroList[i]._name, heroList[i].level, heroList[i].exp));//현제 heroList들의 코드 이름 레벨 경험치를 받아와서 리스트를 만들어줍니다.
-        }
-        string jdata = JsonUtility.ToJson(new SavebleList<HeroInfo>(saveHeroInfo));//saveHeroInfo를 암호화후 json형식으로 저장해줍니다.
-        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jdata);
-        string code = System.Convert.ToBase64String(bytes);
-
-        File.WriteAllText(heroSavePath, code);
-    }
-
-    public void HeroLoad()
-    {
-        if (!File.Exists(heroSavePath)) { HeroSave(); HeroLoad(); return; }//없으면 저장을 한번 해준 후에 실행합니다.
-        string code = File.ReadAllText(heroSavePath);//복호화 해서 불러와줍니다.
-
-        byte[] bytes = System.Convert.FromBase64String(code);
-        string jdata = System.Text.Encoding.UTF8.GetString(bytes);
-        List<HeroInfo> loadHeroInfo = JsonUtility.FromJson<SavebleList<HeroInfo>>(jdata).save;
-        for (int i = 0; i < loadHeroInfo.Count; i++)//list의 요소 만큼
-        {
-            GameObject loadedHero = Instantiate(heroPrefab);//프리팹의 히어로를 만들어서 비활성화 한 후에 각각 요소들만 넣어줍니다.
-            loadedHero.SetActive(false);
-            heroList.Add(loadedHero.GetComponent<Hero>());
-            heroList[i].code = loadHeroInfo[i].code;
-            heroList[i].level = loadHeroInfo[i].level;
-            heroList[i]._name = loadHeroInfo[i].name;
-            heroList[i].exp = loadHeroInfo[i].exp;
-            heroList[i].UpdateStatus();
-        }
-        
-    }
     public void AchievementInfoSave()//유저 정보 저장
     {
-        for (int i = 0; i < heroList.Count; i++)
-        {
-            achievement.Add(heroList[i].code);
-        }
-        string jdata = JsonUtility.ToJson(achievement);//현재 사용자 정보를 암호화후 json형식으로 저장해줍니다.
+        string jdata = JsonUtility.ToJson(new SavebleList<string>(achievement));//현재 사용자 정보를 암호화후 json형식으로 저장해줍니다.
         byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jdata);
         string code = System.Convert.ToBase64String(bytes);
-
         File.WriteAllText(achievementSavePath, code);
     }
 
@@ -182,14 +142,27 @@ public class User : MonoBehaviour
 
         byte[] bytes = System.Convert.FromBase64String(code);
         string jdata = System.Text.Encoding.UTF8.GetString(bytes);
-        List<string> loadedAchievement = JsonUtility.FromJson<List<string>>(jdata);
-        achievement = loadedAchievement;
+        SavebleList<string> loadedAchievement = JsonUtility.FromJson<SavebleList<string>>(jdata);
+        achievement = loadedAchievement.save;
     }
 
-    public void TestHeroAdd()
+    public void HeroInfoSave()//히어로 정보 저장
     {
-        GameObject obj = Instantiate(heroPrefab);
-        obj.SetActive(false);
-        heroList.Add(obj.GetComponent<Hero>());
+        string jdata = JsonUtility.ToJson(new SavebleList<HeroInfo>(heroList));//현재 사용자 정보를 암호화후 json형식으로 저장해줍니다.
+        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(jdata);
+        string code = System.Convert.ToBase64String(bytes);
+
+        File.WriteAllText(heroSavePath, code);
+    }
+
+    public void HeroInfoLoad()//히어로 정보 불러오기
+    {
+        if (!File.Exists(heroSavePath)) { HeroInfoSave(); return; }
+        string code = File.ReadAllText(heroSavePath);//복호화 해서 불러와줍니다.
+
+        byte[] bytes = System.Convert.FromBase64String(code);
+        string jdata = System.Text.Encoding.UTF8.GetString(bytes);
+        SavebleList<HeroInfo> loadedHeroInfo = JsonUtility.FromJson<SavebleList<HeroInfo>>(jdata);
+        heroList = loadedHeroInfo.save;
     }
 }

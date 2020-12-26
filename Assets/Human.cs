@@ -13,6 +13,7 @@ public class Human : MonoBehaviour
     public float speed;//속도
     public float moveDistance;//이동 범위
     public float attackDistance;//공격 범위
+    public List<Item> itemList;//아이템 리스트
     public Queue<Human> moveTarget = new Queue<Human>();//움직일 target 담아둠
     public Queue<Human> attackTarget = new Queue<Human>();//공격할 target 담아둠
     public GameObject design;//캐릭터 생김새
