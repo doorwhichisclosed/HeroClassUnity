@@ -7,7 +7,9 @@ public class Soldier : Human
 {
 
     public int level;//레벨
-    public int exp;//경험치
+    public float exp;//경험치
+    public int jobLevel;//직업 단계
+    public float jobExp;//직업 숙련도
 
     public List<SoldierDB> soldierDBList;//soldierDB list
 
