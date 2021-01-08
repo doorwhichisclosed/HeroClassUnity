@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Soldier Database", menuName = "Soldier DataBase/Soldier Database", order = int.MaxValue)]
 public class SoldierDB : ScriptableObject
 {
-    public Image CharacterImage;//캐럭터 이미지를 넣어주세요
+    public Sprite CharacterImage;//캐럭터 이미지를 넣어주세요
     public string CharacterDescription;//캐릭터 설명을 입력해주세요
     public string Code;//캐릭터 코드를 입력해주세요
     public string LevelHP;//StatValue에 수식을 넣어야 작동합니다.

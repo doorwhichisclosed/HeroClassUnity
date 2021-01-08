@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Hero Database", menuName = "Hero DataBase/Hero Database", order = int.MaxValue)]
 public class HeroDB : ScriptableObject
 {
-    public Image CharacterImage;//캐럭터 이미지를 넣어주세요
+    public Sprite CharacterImage;//캐럭터 이미지를 넣어주세요
     public string CharacterDescription;//캐릭터 설명을 입력해주세요
     public string Code;//캐릭터 코드를 입력해주세요
     public string Name;//캐릭터 이름을 입력해주세요
