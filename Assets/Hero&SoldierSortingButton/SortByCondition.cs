@@ -30,6 +30,7 @@ public class SortByCondition : MonoBehaviour
     public Toggle attack;
     public Toggle proficiency;
     public Toggle hp;
+    public Toggle upDown;
     [Header("BySkill")]
     public Toggle bleed;
     public Toggle stun;
@@ -116,28 +117,29 @@ public class SortByCondition : MonoBehaviour
 
     public void SortByStat()
     {
+        int upOrDown = upDown.isOn ? 1 : -1;
         List<Transform> sortList = new List<Transform>();
         for (int i = 0; i < characterButtonCanvas.childCount; i++)
             sortList.Add(characterButtonCanvas.GetChild(i));
         if (level.isOn)
         {
-            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempLevel));
+            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempLevel) * upOrDown);
         }
         if(defense.isOn)
         {
-            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempDefense));
+            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempDefense) * upOrDown);
         }
         if (attack.isOn)
         {
-            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempAttack));
+            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempAttack) * upOrDown);
         }
         if (proficiency.isOn)
         {
-            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempProficiency));
+            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempProficiency) * upOrDown);
         }
         if (hp.isOn)
         {
-            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempHp));
+            sortList.Sort((Transform a, Transform b) => a.GetComponent<HeroManageButton>().tempLevel.CompareTo(b.GetComponent<HeroManageButton>().tempHp) * upOrDown);
         }
         for (int i=0;i<sortList.Count;i++)
         {

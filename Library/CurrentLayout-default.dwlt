@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1920
+    x: 0
     y: 43
     width: 1920
     height: 1037
@@ -462,7 +462,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 1e560000
     m_LastClickedID: 22046
-    m_ExpandedIDs: 0000000006560000085600000a5600000c5600000e56000010560000125600003056000000ca9a3b
+    m_ExpandedIDs: 00000000ba570000bc570000be570000c0570000c2570000c4570000c6570000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -490,7 +490,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000006560000085600000a5600000c5600000e5600001056000012560000
+    m_ExpandedIDs: 00000000ba570000bc570000be570000c0570000c2570000c4570000c6570000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 56a00600
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 82fefeff7adcffff52dfffff08e1ffff2af3ffff6afbffff96360000ba360000763800003c3c00007c3c00004a3d0000103f0000
       m_RenameOverlay:
@@ -622,8 +622,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1920
-    y: 73
+    x: 0
+    y: 19
     width: 1048
     height: 477
   m_ViewDataDictionary: {fileID: 0}
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 1173.4673, y: 2312.1643, z: -764.92834}
     speed: 2
-    m_Value: {x: 1137.1536, y: 2298.1038, z: -762.4132}
+    m_Value: {x: 1173.4673, y: 2312.1643, z: -764.92834}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 583.6145
     speed: 2
-    m_Value: 558.4828
+    m_Value: 583.6145
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -785,23 +785,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 867
-      height: 447
-    m_Scale: {x: 0.14703947, y: 0.14703947}
-    m_Translation: {x: 433.5, y: 223.5}
+      height: 468
+    m_Scale: {x: 0.15394737, y: 0.15394737}
+    m_Translation: {x: 433.5, y: 234}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -2948.188
+      x: -2815.8975
       y: -1520
-      width: 5896.376
+      width: 5631.795
       height: 3040
     m_MinimalGUI: 1
-  m_defaultScale: 0.14703947
+  m_defaultScale: 0.15394737
   m_LastWindowPixelSize: {x: 867, y: 468}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1

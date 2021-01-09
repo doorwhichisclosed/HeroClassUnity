@@ -65,7 +65,7 @@ public class HeroManageButton : MonoBehaviour
         {
             specificNameText.text = soldierDB.name;
         }
-        specificCharaterStatText.text = "레벨: %d\n 공격력: %d\n 방어력: %d\n체력: %d\n";
+        specificCharaterStatText.text = "레벨: " + tempLevel + "\n공격력: " + tempAttack + "\n방어력: " + tempDefense + "\n체력: " + tempHp;
         //이제 선택한 오브젝트에 대한 설명들 넣어줌
     }
 
