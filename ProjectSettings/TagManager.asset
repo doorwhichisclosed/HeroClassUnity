@@ -7,6 +7,9 @@ TagManager:
   - hero
   - soldier
   - enemy
+  - Canvas
+  - ItemList
+  - EquipManager
   layers:
   - Default
   - TransparentFX
@@ -43,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UnityImage
+    uniqueID: 1823894495
     locked: 0
